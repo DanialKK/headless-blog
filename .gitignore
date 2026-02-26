@@ -23,6 +23,10 @@ backend/wp-content/plugins/*
 backend/wp-content/themes/*
 !backend/wp-content/themes/headless-blank/
 backend/.env
+backend/wp-content/upgrade/*
+backend/wp-content/cache/*
+backend/wp-content/backup-db/*
+backend/wp-content/backups/*
 docker-compose.override.yml
 
 # OS / Editor files

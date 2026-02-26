@@ -28,6 +28,7 @@ backend/wp-content/cache/*
 backend/wp-content/backup-db/*
 backend/wp-content/backups/*
 docker-compose.override.yml
+backend/wp-content/index.php
 
 # OS / Editor files
 .DS_Store

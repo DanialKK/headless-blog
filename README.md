@@ -5,7 +5,7 @@
 
 ## ویژگی‌ها
 - Headless WordPress با WPGraphQL
-- Docker برای وردپرس لوکال (وردپرس + MySQL)
+- Docker برای راه‌اندازی سریع وردپرس (وردپرس + MySQL)
 - Next.js 16+ با App Router, TypeScript, Tailwind CSS, React Compiler
 - ISR (Incremental Static Regeneration) برای عملکرد بالا
 - فرانت وردپرس کاملاً غیرفعال شده (فقط wp-admin و graphql در دسترس)
@@ -33,13 +33,17 @@ cp .env.example .env
 # ران کن
 docker compose up -d
 ```
-## برو به http://localhost:8080
+## برو به http://localhost:8080/
+###  نصب و فعال کردن WPGraphQL افزونه 
+### Permalinks → Post name → Save
+### Appearance → Themes → Headless Blank → Activate
+### از این پس با آدرس wp-admin وارد میشوید و آدرس وردپرس غیرفعال میشود
 
 ### ۳. Frontend: Next.js رو راه‌اندازی کن
 ```bash
 cd ../frontend
 # اگر .env.local وجود نداره، بساز و این رو بگذار:
-# NEXT_PUBLIC_WORDPRESS_API_URL=http://localhost:8080/graphql
+NEXT_PUBLIC_WORDPRESS_API_URL=http://localhost:8080/graphql
 
 npm install
 npm run dev
